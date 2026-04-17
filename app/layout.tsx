@@ -1,15 +1,8 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-jakarta",
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
-  display: "swap",
-});
+import { ppFramaDisplay, ppFramaText } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Jadier — Cabinet d'expertise comptable",
@@ -26,8 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={jakarta.variable}>
-      <body className="bg-ivory text-ink antialiased">
+    <html
+      lang="fr"
+      className={`${ppFramaText.variable} ${ppFramaDisplay.variable}`}
+    >
+      <body className="bg-ivory text-ink antialiased font-sans">
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

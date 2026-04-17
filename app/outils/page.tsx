@@ -17,19 +17,19 @@ const tools: Tool[] = [
     name: "Pennylane",
     tagline: "Gestion financière & comptable",
     desc: "Plateforme française de gestion financière et comptable qui centralise facturation, comptabilité et pilotage financier pour entreprises et experts-comptables.",
-    accent: "from-[#eef2e6] to-[#cbd5b3]",
+    accent: "from-sage/20 to-sage/60",
   },
   {
     name: "Silae",
     tagline: "Paie & déclarations sociales",
     desc: "Logiciel de paie en ligne utilisé par cabinets comptables et entreprises pour automatiser la gestion de la paie et des déclarations sociales.",
-    accent: "from-[#f0ece4] to-[#d8cfbc]",
+    accent: "from-sage/10 to-moss/40",
   },
   {
     name: "RCA",
     tagline: "Conseil, prévisionnel & pilotage",
     desc: "Éditeur de logiciels pour experts-comptables proposant des outils de conseil, prévisionnel et pilotage afin d'accompagner les dirigeants.",
-    accent: "from-[#e7ecdf] to-[#b8c29d]",
+    accent: "from-sage/30 to-olive/30",
   },
 ];
 

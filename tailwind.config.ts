@@ -1,31 +1,56 @@
 import type { Config } from "tailwindcss";
 
+/**
+ * Jadier — Brand design tokens.
+ * Palette and typography align strictly with the official charter.
+ */
 const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        ivory: "#f6f6f4",
-        ink: "#1a1a1a",
-        olive: {
-          DEFAULT: "#2a3124",
-          deep: "#2a3124",
-        },
-        sage: {
-          DEFAULT: "#a1a790",
-          light: "#b8bda8",
-        },
-        moss: {
-          DEFAULT: "#7a8468",
-          dark: "#697358",
-        },
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      white: "#ffffff",
+      black: "#000000",
+      ivory: "#F6F6F4",
+      ink: "#1A1A1A",
+      moss: {
+        DEFAULT: "#7A8468",
+        dark: "#2A3124",
       },
+      sage: {
+        DEFAULT: "#A1A790",
+        light: "#B8BDA8",
+      },
+      olive: {
+        DEFAULT: "#2A3124",
+        deep: "#2A3124",
+      },
+      // Minimal utility colors for form validation only.
+      red: {
+        600: "#c0392b",
+      },
+    },
+    extend: {
       fontFamily: {
-        sans: ["var(--font-jakarta)", "ui-sans-serif", "system-ui"],
-        display: ["var(--font-jakarta)", "ui-sans-serif", "system-ui"],
+        sans: [
+          "var(--font-sans)",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "sans-serif",
+        ],
+        display: [
+          "var(--font-display)",
+          "var(--font-sans)",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
       },
       letterSpacing: {
         tightest: "-0.045em",

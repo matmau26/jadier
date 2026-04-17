@@ -136,7 +136,7 @@ export default function MissionsPage() {
                           <div className="mt-10 md:pl-20">
                             <Link
                               href={cat.cta.href}
-                              className="group inline-flex items-center gap-2 rounded-full bg-moss px-6 py-3 text-sm font-medium text-ivory transition-all hover:bg-moss-dark hover:-translate-y-0.5"
+                              className="group inline-flex items-center gap-2 rounded-full bg-moss px-6 py-3 text-sm font-medium text-ivory transition-all hover:bg-olive hover:-translate-y-0.5"
                             >
                               {cat.cta.label}
                               <ArrowUpRight
@@ -174,7 +174,7 @@ export default function MissionsPage() {
               <div className="lg:col-span-4 lg:text-right">
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center gap-2 rounded-full bg-moss px-8 py-4 text-base font-medium text-ivory transition-all hover:bg-moss-dark hover:-translate-y-0.5"
+                  className="group inline-flex items-center gap-2 rounded-full bg-moss px-8 py-4 text-base font-medium text-ivory transition-all hover:bg-olive hover:-translate-y-0.5"
                 >
                   Nous contacter
                   <ArrowUpRight

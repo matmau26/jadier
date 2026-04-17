@@ -45,10 +45,10 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`link-underline text-sm font-medium transition-colors ${
+              className={`link-underline text-sm font-medium transition-colors duration-300 ${
                 pathname === item.href
                   ? "text-ink"
-                  : "text-ink/70 hover:text-ink"
+                  : "text-ink/70 hover:text-moss"
               }`}
             >
               {item.label}
@@ -59,7 +59,7 @@ export default function Header() {
         <div className="hidden md:block">
           <Link
             href="/contact"
-            className="inline-flex items-center rounded-full bg-moss px-6 py-3 text-sm font-medium text-ivory transition-all hover:bg-moss-dark hover:shadow-lg hover:-translate-y-0.5"
+            className="inline-flex items-center rounded-full bg-moss px-6 py-3 text-sm font-medium text-ivory transition-all hover:bg-olive hover:shadow-lg hover:-translate-y-0.5"
           >
             Contact
           </Link>

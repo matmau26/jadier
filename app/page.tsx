@@ -78,7 +78,7 @@ export default function HomePage() {
           >
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-moss px-8 py-4 text-base font-medium text-ivory transition-all hover:bg-moss-dark hover:shadow-xl hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-2 rounded-full bg-moss px-8 py-4 text-base font-medium text-ivory transition-all hover:bg-olive hover:shadow-xl hover:-translate-y-0.5"
             >
               Prendre contact
               <ArrowUpRight
@@ -229,7 +229,7 @@ export default function HomePage() {
               <div className="lg:col-span-4 lg:text-right">
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center gap-2 rounded-full bg-moss px-8 py-4 text-base font-medium text-ivory transition-all hover:bg-moss-dark hover:-translate-y-0.5"
+                  className="group inline-flex items-center gap-2 rounded-full bg-moss px-8 py-4 text-base font-medium text-ivory transition-all hover:bg-olive hover:-translate-y-0.5"
                 >
                   Nous contacter
                   <ArrowUpRight
