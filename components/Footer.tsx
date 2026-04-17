@@ -8,7 +8,11 @@ export default function Footer() {
       <div className="container-px py-20 md:py-28">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
-            <Logo variant="full" color="ivory" />
+            <Logo
+              variant="full"
+              tone="light"
+              heightClassName="h-8 w-auto md:h-10"
+            />
             <p className="mt-6 max-w-sm text-ivory/70 font-light leading-relaxed">
               Cabinet d&apos;expertise comptable moderne, digital et
               réactif, engagé au service de votre performance.
@@ -78,9 +82,23 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-ivory/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-ivory/50 font-light">
-          <p>© {new Date().getFullYear()} Jadier — Tous droits réservés.</p>
-          <p>Cabinet d&apos;expertise comptable inscrit à l&apos;Ordre.</p>
+        <div className="mt-16 pt-8 border-t border-ivory/10 flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-6">
+          {/* Bottom left — full white wordmark */}
+          <Logo
+            variant="full"
+            tone="light"
+            heightClassName="h-6 w-auto md:h-7"
+          />
+
+          <p className="text-xs text-ivory/50 font-light text-center md:text-center">
+            © {new Date().getFullYear()} Jadier — Tous droits réservés.
+          </p>
+
+          {/* Bottom right — % monogram */}
+          <Logo
+            variant="mark"
+            heightClassName="h-10 w-auto md:h-12"
+          />
         </div>
       </div>
     </footer>
