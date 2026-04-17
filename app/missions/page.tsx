@@ -13,8 +13,8 @@ export default function MissionsPage() {
 
   return (
     <>
-      {/* HERO — text over concrete background */}
-      <section className="relative isolate overflow-hidden">
+      {/* HERO — text over concrete background, contained below the header */}
+      <section className="relative isolate overflow-hidden mt-20 md:mt-24">
         <div aria-hidden className="absolute inset-0 -z-10">
           <Image
             src="/concrete.jpg"
@@ -29,7 +29,7 @@ export default function MissionsPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-ivory/40 via-ivory/20 to-ivory/70" />
         </div>
 
-        <div className="relative pt-40 md:pt-48 pb-20 md:pb-28 container-px">
+        <div className="relative pt-20 md:pt-28 pb-20 md:pb-28 container-px">
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}

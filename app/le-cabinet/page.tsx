@@ -39,21 +39,22 @@ const points = [
 export default function CabinetPage() {
   return (
     <>
-      {/* HERO VISUAL — under the header, above the title */}
-      <section className="pt-24 md:pt-28 container-px">
+      {/* HERO VISUAL — full-bleed, under the header, above the title */}
+      <section className="pt-20 md:pt-24">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease }}
-          className="relative aspect-[16/7] md:aspect-[21/9] w-full overflow-hidden rounded-4xl md:rounded-5xl"
+          className="w-full"
         >
           <Image
             src="/JADIER-marbre.png"
             alt="Cabinet Jadier — Le cabinet"
-            fill
+            width={3294}
+            height={1182}
             priority
             sizes="100vw"
-            className="object-cover"
+            className="w-full h-auto"
           />
         </motion.div>
       </section>

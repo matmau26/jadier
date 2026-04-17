@@ -34,13 +34,13 @@ const ease = [0.22, 1, 0.36, 1] as const;
 export default function HomePage() {
   return (
     <>
-      {/* HERO VISUAL — under the header, above the eyebrow text */}
-      <section className="pt-24 md:pt-28 container-px">
+      {/* HERO VISUAL — full-bleed, under the header, above the eyebrow text */}
+      <section className="pt-20 md:pt-24">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease }}
-          className="overflow-hidden rounded-4xl md:rounded-5xl"
+          className="w-full"
         >
           <Image
             src="/JADIER-wall.png"
