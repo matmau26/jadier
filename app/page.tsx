@@ -56,7 +56,7 @@ export default function HomePage() {
 
       {/* HERO COPY */}
       <section className="relative">
-        <div className="container-px pt-14 md:pt-20 pb-20 md:pb-28">
+        <div className="container-px pt-8 md:pt-10 pb-20 md:pb-28">
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -150,17 +150,17 @@ export default function HomePage() {
             </h2>
           </Reveal>
 
-          <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+          <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
             {pillars.map((p, i) => (
               <Reveal key={p.title} delay={i * 0.1}>
-                <div className="group h-full rounded-4xl bg-ivory p-8 md:p-10 transition-all hover:-translate-y-1 hover:shadow-xl">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-olive/10 text-olive">
-                    <p.icon size={20} />
+                <div className="group h-full rounded-3xl bg-ivory p-5 md:p-6 transition-all hover:-translate-y-1 hover:shadow-xl">
+                  <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-olive/10 text-olive">
+                    <p.icon size={16} />
                   </div>
-                  <h3 className="mt-6 text-xl md:text-2xl font-medium text-ink tracking-tight">
+                  <h3 className="mt-4 text-base md:text-lg font-medium text-ink tracking-tight">
                     {p.title}
                   </h3>
-                  <p className="mt-3 text-ink/60 font-light leading-relaxed">
+                  <p className="mt-2 text-sm text-ink/60 font-light leading-relaxed">
                     {p.desc}
                   </p>
                 </div>

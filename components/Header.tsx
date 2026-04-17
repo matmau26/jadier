@@ -45,7 +45,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`link-underline text-sm font-medium transition-colors duration-300 ${
+              className={`link-underline text-base font-medium transition-colors duration-300 ${
                 pathname === item.href
                   ? "text-ink"
                   : "text-ink/70 hover:text-moss"
