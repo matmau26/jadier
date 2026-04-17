@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Plus } from "lucide-react";
@@ -12,36 +13,52 @@ export default function MissionsPage() {
 
   return (
     <>
-      {/* HERO */}
-      <section className="relative pt-40 md:pt-48 pb-16 md:pb-24 container-px">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-xs font-medium uppercase tracking-[0.22em] text-moss mb-6"
-        >
-          Missions
-        </motion.p>
+      {/* HERO — text over concrete background */}
+      <section className="relative isolate overflow-hidden">
+        <div aria-hidden className="absolute inset-0 -z-10">
+          <Image
+            src="/concrete.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          {/* Ivory wash + subtle gradient to keep ink text readable */}
+          <div className="absolute inset-0 bg-ivory/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ivory/40 via-ivory/20 to-ivory/70" />
+        </div>
 
-        <motion.blockquote
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="heading-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight text-balance max-w-5xl"
-        >
-          <span className="text-moss">“</span>Nous avons accompagné plus de{" "}
-          <span className="italic">50 créations</span> d&apos;entreprise.
-          <span className="text-moss">”</span>
-        </motion.blockquote>
+        <div className="relative pt-40 md:pt-48 pb-20 md:pb-28 container-px">
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-xs font-medium uppercase tracking-[0.22em] text-moss mb-6"
+          >
+            Missions
+          </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.25 }}
-          className="mt-6 text-sm uppercase tracking-[0.16em] text-ink/50 font-medium"
-        >
-          — Jadier Expertise
-        </motion.p>
+          <motion.blockquote
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="heading-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight text-balance max-w-5xl"
+          >
+            <span className="text-moss">“</span>Nous avons accompagné plus de{" "}
+            <span className="italic">50 créations</span> d&apos;entreprise.
+            <span className="text-moss">”</span>
+          </motion.blockquote>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.25 }}
+            className="mt-6 text-sm uppercase tracking-[0.16em] text-ink/50 font-medium"
+          >
+            — Jadier Expertise
+          </motion.p>
+        </div>
       </section>
 
       {/* INTRO */}
