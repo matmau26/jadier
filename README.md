@@ -4,7 +4,7 @@ Site vitrine ultra-premium du cabinet Jadier, construit avec Next.js 14 (App
 Router), Tailwind CSS, Framer Motion et React Hook Form + Zod.
 
 ## Stack
-
+ 
 - **Framework** : Next.js 14 (App Router) + TypeScript
 - **Styling** : Tailwind CSS avec design tokens custom (ivory, olive, sage, moss)
 - **Animations** : Framer Motion
