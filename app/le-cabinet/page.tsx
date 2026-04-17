@@ -40,7 +40,8 @@ export default function CabinetPage() {
         eyebrow="Le Cabinet"
         title={
           <>
-            Les <span className="italic text-moss">5 points forts</span>
+            Les{" "}
+            <span className="italic font-bold text-moss">5 points forts</span>
             <br />
             du cabinet.
           </>

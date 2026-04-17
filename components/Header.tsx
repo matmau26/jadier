@@ -38,7 +38,7 @@ export default function Header() {
       }`}
     >
       <div className="container-px flex items-center justify-between h-20 md:h-24">
-        <Logo />
+        <Logo heightClassName="h-10 w-auto md:h-14" />
 
         <nav className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
