@@ -1,10 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles, LineChart, ShieldCheck, Building2, FileDigit } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import HeroImage from "@/components/HeroImage";
 
 const pillars = [
   {
@@ -34,11 +34,28 @@ const ease = [0.22, 1, 0.36, 1] as const;
 export default function HomePage() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative isolate overflow-hidden min-h-[70vh] flex items-center">
-        <HeroImage />
+      {/* HERO VISUAL — under the header, above the eyebrow text */}
+      <section className="pt-24 md:pt-28 container-px">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease }}
+          className="relative aspect-[16/7] md:aspect-[21/9] w-full overflow-hidden rounded-4xl md:rounded-5xl"
+        >
+          <Image
+            src="/JADIER-wall.png"
+            alt="Cabinet Jadier"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </motion.div>
+      </section>
 
-        <div className="relative z-10 w-full container-px pt-40 md:pt-48 pb-20 md:pb-28">
+      {/* HERO COPY */}
+      <section className="relative">
+        <div className="container-px pt-14 md:pt-20 pb-20 md:pb-28">
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}

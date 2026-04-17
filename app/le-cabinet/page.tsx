@@ -1,9 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
+
+const ease = [0.22, 1, 0.36, 1] as const;
 
 const points = [
   {
@@ -36,18 +39,58 @@ const points = [
 export default function CabinetPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Le Cabinet"
-        title={
-          <>
-            Les{" "}
-            <span className="italic font-bold text-moss">5 points forts</span>
-            <br />
-            du cabinet.
-          </>
-        }
-        subtitle="Une signature d'accompagnement construite autour du digital, de l'exigence et de l'expertise sectorielle."
-      />
+      {/* HERO VISUAL — under the header, above the title */}
+      <section className="pt-24 md:pt-28 container-px">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease }}
+          className="relative aspect-[16/7] md:aspect-[21/9] w-full overflow-hidden rounded-4xl md:rounded-5xl"
+        >
+          <Image
+            src="/JADIER-marbre.png"
+            alt="Cabinet Jadier — Le cabinet"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </motion.div>
+      </section>
+
+      {/* HERO COPY */}
+      <section className="container-px pt-14 md:pt-20 pb-16 md:pb-24">
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-xs font-medium uppercase tracking-[0.22em] text-moss mb-6"
+        >
+          Le Cabinet
+        </motion.p>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease, delay: 0.05 }}
+          className="heading-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light text-balance max-w-5xl"
+        >
+          Les{" "}
+          <span className="italic font-bold text-moss">5 points forts</span>
+          <br />
+          du cabinet.
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.25 }}
+          className="mt-8 max-w-2xl text-lg md:text-xl font-light text-ink/70 leading-relaxed"
+        >
+          Une signature d&apos;accompagnement construite autour du digital,
+          de l&apos;exigence et de l&apos;expertise sectorielle.
+        </motion.p>
+      </section>
 
       <section className="container-px pb-24 md:pb-32">
         <div className="grid grid-cols-1 divide-y divide-ink/10 border-t border-ink/10">
