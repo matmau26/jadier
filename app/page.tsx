@@ -40,15 +40,16 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease }}
-          className="relative aspect-[16/7] md:aspect-[21/9] w-full overflow-hidden rounded-4xl md:rounded-5xl"
+          className="overflow-hidden rounded-4xl md:rounded-5xl"
         >
           <Image
             src="/JADIER-wall.png"
             alt="Cabinet Jadier"
-            fill
+            width={3524}
+            height={439}
             priority
             sizes="100vw"
-            className="object-cover"
+            className="w-full h-auto"
           />
         </motion.div>
       </section>
