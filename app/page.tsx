@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles, LineChart, ShieldCheck, Building2, FileDigit } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import HeroVideo from "@/components/HeroVideo";
+import HeroImage from "@/components/HeroImage";
 
 const pillars = [
   {
@@ -35,10 +35,10 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative isolate overflow-hidden">
-        <HeroVideo />
+      <section className="relative isolate overflow-hidden min-h-[70vh] flex items-center">
+        <HeroImage />
 
-        <div className="relative container-px pt-40 md:pt-48 pb-20 md:pb-28">
+        <div className="relative z-10 w-full container-px pt-40 md:pt-48 pb-20 md:pb-28">
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
